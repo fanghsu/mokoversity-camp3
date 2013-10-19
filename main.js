@@ -1,7 +1,7 @@
 
 var gameModule = (function (){ 
 
-	
+	var timeoutVar, count = 0;
 
 	function start() {
 	var canvas=document.getElementById('game');
@@ -18,12 +18,34 @@ var gameModule = (function (){
 	ctx.arc(ballX, ballY, ballR, 0, Math.PI, true)
 	ctx.fill();
 
+	
+
+		if (count <=10){
+
+			timeoutVar = setTimeout(start, 1000);
+			count = count +1;
+			//console.log("CounterA: " + count);
+		}
+		else{
+
+		}
 	}
 
-	return {
-		hello: start
+	function gameOver(){
+		if (count <=10){
+			timeoutVar = setTimeout(gameOver, 1000);
+			console.log("CounterB: " + count);
+		}
 	}
-}) ();
 
-gameModule.hello();
+	return{
+		sstart: start,
+		ggameOver: gameOver
+	}
+
+
+}) ();	
+
+gameModule.sstart();
+gameModule.ggameOver();
 
