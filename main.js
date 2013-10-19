@@ -20,19 +20,22 @@ var gameModule = (function (){
 
 	
 
-		if (count <=10){
+		if (count >=10){
+
+		}
+		else{
 
 			timeoutVar = setTimeout(start, 1000);
 			count = count +1;
 			//console.log("CounterA: " + count);
-		}
-		else{
 
 		}
 	}
 
 	function gameOver(){
-		if (count <=10){
+		if (count >=10){
+
+		}else{
 			timeoutVar = setTimeout(gameOver, 1000);
 			console.log("CounterB: " + count);
 		}
