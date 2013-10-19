@@ -9,11 +9,16 @@ var gameModule = (function (){
 	var ballX = Math.floor(Math.random() * 300); // 0..300
 	var ballY = Math.floor(Math.random() * 500);
 	var ballR = Math.floor(Math.random() * 100);
+	var colorR = Math.floor(Math.random() * 256)%256;
+	var colorG = Math.floor(Math.random() * 256)%256;
+	var colorB = Math.floor(Math.random() * 256)%256;
 
 	canvas.width = 480;
 	canvas.height = 320;
 
-	ctx.fillstyle ='black';
+	ctx.fillStyle = "#"+ colorR.toString(16) + colorG.toString(16) + colorB.toString(16);
+	
+	//ctx.fillStyle = '#ff0000';
 	ctx.beginPath();
 	ctx.arc(ballX, ballY, ballR, 0, Math.PI, true)
 	ctx.fill();
