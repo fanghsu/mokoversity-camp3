@@ -6,8 +6,8 @@ var gameModule = (function (){
 	function start() {
 	var canvas=document.getElementById('game');
 	var ctx=canvas.getContext('2d');
-	var ballX = Math.floor(Math.random() * 300); // 0..300
-	var ballY = Math.floor(Math.random() * 500);
+	var ballX = Math.floor(Math.random() * 500); // 0..300
+	var ballY = Math.floor(Math.random() * 600);
 	var ballR = Math.floor(Math.random() * 100);
 	var colorR = Math.floor(Math.random() * 256)%256;
 	var colorG = Math.floor(Math.random() * 256)%256;
