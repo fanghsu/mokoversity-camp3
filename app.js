@@ -31,7 +31,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/user', user.list);
 app.get('/scores', user.save);
-//app.get('/user', user.save);
+//app.get('/scores', scores.list); 只能定義一個來承接, 後面那個部會有動作
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
