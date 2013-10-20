@@ -10,7 +10,7 @@ var gameModule = (function (){
 
 	function start() {
 
-	var ballX = Math.floor(Math.random() * 400); // 0..300
+	var ballX = Math.floor(Math.random() * 600); // 0..300
 	var ballY = Math.floor(Math.random() * 500);
 	var ballR = Math.floor(Math.random() * 100);
 	var colorR = Math.floor(Math.random() * 256)%256;
