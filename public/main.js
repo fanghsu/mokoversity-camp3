@@ -1,6 +1,6 @@
 /*jslint browser: true, devel: true, closure: true */
 
-var gameModule = (function (document) { 
+var gameModule = (function (document, $) { 
     
     "use strict"
 
@@ -63,7 +63,7 @@ var gameModule = (function (document) {
         console.log("Score: " + score);
         ballR = 0;
 
-        // API: http://127.0.0.1:3000/scores?s=500
+        // send score to server API: http://127.0.0.1:3000/scores?s=500
         var api = "http://127.0.0.1:3000/scores?s=" + score;
 
         $.ajax({ url: api});
@@ -74,7 +74,7 @@ var gameModule = (function (document) {
         ggameOver: gameOver
 	}
 
-}) (document);	
+}) (document, $);	
 
 gameModule.sstart();
 
