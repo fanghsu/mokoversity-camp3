@@ -1,6 +1,6 @@
 
 /*
- * GET users listing.
+ * GET users listing. 
  */
 
 exports.list = function(req, res){
@@ -8,5 +8,5 @@ exports.list = function(req, res){
 };
 
 exports.save = function(req, res){
-  consloe.log = ("Your Scores:");
+  console.log("Your Scores:"+ req.url);   //p.43
 };
