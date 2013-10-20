@@ -2,11 +2,12 @@
 /*
  * GET users listing. 
  */
-
+var scores = [];
 exports.list = function(req, res){
   res.send("respond with a resource");
 };
 
 exports.save = function(req, res){
-  console.log("Your Scores:"+ req.url);   //p.43
+  	scores.push(req.query.s);    
+    console.log("Your Scores:"+ scores);   
 };
