@@ -62,6 +62,11 @@ var gameModule = (function (document) {
     function gameOver(){
         console.log("Score: " + score);
         ballR = 0;
+
+        // API: http://127.0.0.1:3000/scores?s=500
+        var api = "http://127.0.0.1:3000/scores?s=" + score;
+
+        $.ajax({ url: api});
 	}
 
 	return{
